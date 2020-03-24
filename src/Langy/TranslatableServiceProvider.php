@@ -11,12 +11,14 @@ class TranslatableServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../config/langy.php' => config_path('langy.php'),
         ], 'translatable');
+
+        $this->loadMigrationsFrom(__DIR__.'/../tests/migrations/');
     }
 
     public function register()
     {
         $this->mergeConfigFrom(
-            __DIR__.'/../config/langy.php', 'translatable'
+            __DIR__.'/../config/langy.php', 'langy'
         );
 
         $this->registerTranslatableHelper();

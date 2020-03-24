@@ -2,8 +2,6 @@
 
 return [
 
-
-
     'locale_separator' => '-',
 
     'locale' => null,
