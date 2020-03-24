@@ -314,12 +314,7 @@ trait Langy
      */
     private function getFallbackLocale($locale = null)
     {
-        if ($locale && $this->isLocaleCountryBased($locale)) {
-            if ($fallback = $this->getLanguageFromCountryBasedLocale($locale)) {
-                return $fallback;
-            }
-        }
-
+     
         return config('translatable.fallback_locale');
     }
 

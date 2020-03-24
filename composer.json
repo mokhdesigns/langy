@@ -32,7 +32,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Mokhdesigns\\Langy\\TranslatableServiceProvider"
+      
+                "mokhdesigns\\Langy\\TranslatableServiceProvider"
             ]
         }
     },
