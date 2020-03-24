@@ -1,6 +1,6 @@
 <?php
 
-namespace Dimsav\Translatable;
+namespace Mokhdesigns\Langy;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -10,7 +10,7 @@ class TranslatableServiceProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__.'/../config/langy.php' => config_path('langy.php'),
-        ], 'translatable');
+        ], 'langy');
 
         $this->loadMigrationsFrom(__DIR__.'/../tests/migrations/');
     }
