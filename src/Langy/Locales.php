@@ -35,7 +35,7 @@ class Locales implements Arrayable, ArrayAccess
 
     public function load(): void
     {
-        $localesConfig = (array) $this->config->get('translatable.locales', []);
+        $localesConfig = (array) $this->config->get('langy.locales', []);
 
         $langz = DB::table('langs')->get();
 
@@ -48,7 +48,7 @@ class Locales implements Arrayable, ArrayAccess
 
         if (empty($localesConfig)) {
 
-            throw new LocalesNotDefinedException('Please make sure you have run "php artisan config:publish dimsav/laravel-translatable" and that the locales configuration is defined.');
+            throw new LocalesNotDefinedException('Please make sure you have Langs Table Working.');
         }
 
         $this->locales = [];
@@ -72,7 +72,7 @@ class Locales implements Arrayable, ArrayAccess
 
     public function current()
     {
-        return $this->config->get('translatable.locale') ?: $this->translator->getLocale();
+        return $this->config->get('langy.locale') ?: $this->translator->getLocale();
     }
 
     public function has(string $locale): bool
@@ -97,7 +97,7 @@ class Locales implements Arrayable, ArrayAccess
 
     public function getLocaleSeparator(): string
     {
-        return $this->config->get('translatable.locale_separator') ?: '-';
+        return $this->config->get('langy.locale_separator') ?: '-';
     }
 
     public function getCountryLocale(string $locale, string $country): string

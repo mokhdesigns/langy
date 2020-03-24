@@ -14,10 +14,10 @@ trait Langy
 
     protected $defaultLocale;
 
-    public static function bootTranslatable(): void
+    public static function bootlangy(): void
     {
         static::saved(function (Model $model) {
-            /* @var Translatable $model */
+            /* @var langy $model */
             return $model->saveTranslations();
         });
     }
@@ -124,7 +124,7 @@ trait Langy
             $modelName = $namespace.'\\'.class_basename(get_class($this));
         }
 
-        return $modelName.config('translatable.translation_suffix', 'Translation');
+        return $modelName.config('langy.translation_suffix', 'Translation');
     }
 
     /**
@@ -132,7 +132,7 @@ trait Langy
      */
     public function getTranslationModelNamespace()
     {
-        return config('translatable.translation_model_namespace');
+        return config('langy.translation_model_namespace');
     }
 
     /**
@@ -152,7 +152,7 @@ trait Langy
      */
     public function getLocaleKey()
     {
-        return $this->localeKey ?: config('translatable.locale_key', 'locale');
+        return $this->localeKey ?: config('langy.locale_key', 'locale');
     }
 
     /**
@@ -168,7 +168,7 @@ trait Langy
      */
     private function usePropertyFallback()
     {
-        return $this->useFallback() && config('translatable.use_property_fallback', false);
+        return $this->useFallback() && config('langy.use_property_fallback', false);
     }
 
     /**
@@ -186,7 +186,7 @@ trait Langy
         if (
             (
                 ! $translation instanceof Model ||
-                $this->isEmptyTranslatableAttribute($attribute, $translation->$attribute)
+                $this->isEmptylangyAttribute($attribute, $translation->$attribute)
             ) &&
             $this->usePropertyFallback()
         ) {
@@ -200,7 +200,7 @@ trait Langy
         return null;
     }
 
-    protected function isEmptyTranslatableAttribute(string $key, $value): bool
+    protected function isEmptylangyAttribute(string $key, $value): bool
     {
         return empty($value);
     }
@@ -315,7 +315,7 @@ trait Langy
     private function getFallbackLocale($locale = null)
     {
      
-        return config('translatable.fallback_locale');
+        return config('langy.fallback_locale');
     }
 
     private function isLocaleCountryBased(string $locale): bool
@@ -337,7 +337,7 @@ trait Langy
             return $this->useTranslationFallback;
         }
 
-        return config('translatable.use_fallback');
+        return config('langy.use_fallback');
     }
 
     /**
@@ -779,7 +779,7 @@ trait Langy
      */
     private function toArrayAlwaysLoadsTranslations()
     {
-        return config('translatable.to_array_always_loads_translations', true);
+        return config('langy.to_array_always_loads_translations', true);
     }
 
     public static function enableAutoloadTranslations()
