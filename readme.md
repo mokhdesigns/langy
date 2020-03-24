@@ -1,4 +1,4 @@
-Mokhdeigns|Langy 
+Mokhdeigns\Langy 
 
 
 This is a Laravel package for translatable models. it was made for my personal use and it's not complete yet SO DONT USE IT
@@ -37,8 +37,6 @@ Schema::create('category_translations', function(Blueprint $table)
     $table->integer('category_id')->unsigned();
     $table->string('name');
     $table->string('locale')->index();
-
-    $table->unique(['category_id','locale']);
     $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
 });
 ```
@@ -78,7 +76,7 @@ php artisan vendor:publish --tag=langy
  **when you run**
 
 ```bash
-php artisan vendor:publish --tag=langy 
+php artisan migrate
 ```
 
 This will create **langs table** 
