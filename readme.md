@@ -1,12 +1,7 @@
 Mokhdeigns\Langy 
 
 
-This is a Laravel package for translatable models. it was made for my personal use and it's not complete yet SO DONT USE IT
-
-### Docs
-
-* [Installation](#installation-in-4-steps)
-* [Configuration](#configuration)
+This is a Laravel package for translation. it was made for my personal use and it's not complete yet SO DONT USE IT
 
 
 ## Installation 
