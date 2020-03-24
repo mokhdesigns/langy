@@ -1,0 +1,6 @@
+Laravel-Translatable
+====================
+
+
+
+❤️ Thank you!
