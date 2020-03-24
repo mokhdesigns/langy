@@ -1,10 +1,10 @@
 <?php
 
-namespace Dimsav\Translatable;
+namespace Mokhdesigns\Langy;
 
 use ArrayAccess;
 use Illuminate\Contracts\Support\Arrayable;
-use Dimsav\Translatable\Exception\LocalesNotDefinedException;
+use Mokhdesigns\Langy\Exception\LocalesNotDefinedException;
 use Illuminate\Contracts\Config\Repository as ConfigContract;
 use Illuminate\Contracts\Translation\Translator as TranslatorContract;
 use Illuminate\Support\Facades\DB;

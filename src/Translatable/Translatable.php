@@ -1,6 +1,6 @@
 <?php
 
-namespace Dimsav\Translatable;
+namespace Mokhdesigns\Langy;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
@@ -8,7 +8,7 @@ use Illuminate\Database\Query\JoinClause;
 use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Database\Query\Builder as QueryBuilder;
 
-trait Translatable
+trait Langy
 {
     protected static $autoloadTranslations = null;
 

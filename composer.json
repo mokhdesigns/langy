@@ -21,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Dimsav\\Translatable\\": "src/Translatable/"
+            "Mokhdesigns\\Langy\\": "src/Langy/"
         }
     },
     "autoload-dev": {
@@ -32,7 +32,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Dimsav\\Translatable\\TranslatableServiceProvider"
+                "Mokhdesigns\\Langy\\TranslatableServiceProvider"
             ]
         }
     },

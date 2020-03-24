@@ -16,7 +16,7 @@
     </testsuites>
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="false">
-            <file>./src/Translatable/Translatable.php</file>
+            <file>./src/Langy/Langy.php</file>
         </whitelist>
     </filter>
 </phpunit>
